@@ -31,7 +31,7 @@ void s_async_queue_destroy(SAsyncQueue *queue)
     free(queue);
 }
 
-void s_async_queue_push(SAsyncQueue *queue, void *data)
+void s_async_queue_push(SAsyncQueue *queue, spointer data)
 {
     if S_UNLIKELY (queue == NULL)
         return;
@@ -45,7 +45,7 @@ void s_async_queue_push(SAsyncQueue *queue, void *data)
     pthread_mutex_unlock(&queue->mtx);
 }
 
-void *s_async_queue_pop(SAsyncQueue *queue)
+spointer s_async_queue_pop(SAsyncQueue *queue)
 {
     void *ret_data;
 

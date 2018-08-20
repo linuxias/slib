@@ -15,9 +15,9 @@ SQueue *s_queue_create(void);
 
 void s_queue_destroy(SQueue *queue);
 
-void s_queue_push(SQueue *queue, void *data);
+void s_queue_push(SQueue *queue, spointer data);
 
-void *s_queue_pop(SQueue *queue);
+spointer s_queue_pop(SQueue *queue);
 
 SList *s_queue_peek_tail_link(SQueue *queue);
 

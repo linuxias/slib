@@ -8,7 +8,7 @@
 typedef void* spointer;
 typedef struct _SList SList;
 
-typedef void (*s_func) (spointer data, void *user_data);
+typedef void (*s_func) (spointer data, spointer user_data);
 typedef void (*s_del_func) (spointer data);
 typedef int (*s_comp_func) (spointer a, spointer b);
 
@@ -30,7 +30,7 @@ SList *s_list_remove_link(SList *list, SList *link);
 
 SList *s_list_delete_link(SList *list, SList *link);
 
-void s_list_foreach(SList *list, s_func func, void *user_data);
+void s_list_foreach(SList *list, s_func func, spointer user_data);
 
 SList *s_list_last(SList *list);
 

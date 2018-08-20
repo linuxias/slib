@@ -26,7 +26,7 @@ void s_queue_destroy(SQueue *queue)
     queue = NULL;
 }
 
-void s_queue_push(SQueue *queue, void *data)
+void s_queue_push(SQueue *queue, spointer data)
 {
     if S_UNLIKELY (queue == NULL)
         return;
@@ -39,10 +39,10 @@ void s_queue_push(SQueue *queue, void *data)
     queue->length++;
 }
 
-void *s_queue_pop(SQueue *queue)
+spointer s_queue_pop(SQueue *queue)
 {
     SList *node;
-    void * data;
+    spointer data;
 
     if S_UNLIKELY (queue == NULL)
         return NULL;

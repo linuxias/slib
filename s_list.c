@@ -133,7 +133,7 @@ void s_list_free_full(SList *list, s_del_func func)
 
 }
 
-void s_list_foreach(SList *list, s_func func, void *user_data)
+void s_list_foreach(SList *list, s_func func, spointer user_data)
 {
 	while (list)
 	{
