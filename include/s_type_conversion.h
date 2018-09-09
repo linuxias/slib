@@ -1,6 +1,8 @@
 #ifndef __S_TYPE_CONVERSION_H__
 #define __S_TYPE_CONVERSION_H__
 
+#define spointer void*
+
 #define SINT_TO_POINTER(x) ((void *)(long)(x))
 #define SPOINTER_TO_INT(x) ((int)(long)(x))
 #define SUINT_TO_POINTER(x) ((void *)(unsigned long)(x))
