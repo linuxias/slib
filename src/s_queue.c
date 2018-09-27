@@ -57,7 +57,7 @@ spointer s_queue_pop(SQueue *queue)
         else
             queue->tail = NULL;
         s_list_free(node);
-        
+
         queue->length--;
 
         return data;
@@ -80,4 +80,12 @@ SList *s_queue_peek_head_link(SQueue *queue)
         return NULL;
 
     return queue->head;
+}
+
+int s_queue_get_length(SQueue *queue)
+{
+	if S_UNLIKELY (queue == NULL)
+		return -1;
+
+	return queue->length;
 }
