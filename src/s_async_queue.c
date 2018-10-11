@@ -26,7 +26,7 @@ void s_async_queue_destroy(SAsyncQueue *queue)
 
     pthread_mutex_destroy(&queue->mtx);
     pthread_cond_destroy(&queue->cond);
-    s_queue_destroy(&queue->queue);
+    s_queue_clear(&queue->queue);
 
     free(queue);
 }

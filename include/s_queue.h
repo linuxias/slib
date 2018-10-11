@@ -25,4 +25,8 @@ SList *s_queue_peek_head_link(SQueue *queue);
 
 int s_queue_get_length(SQueue *queue);
 
+void s_queue_init(SQueue *queue);
+
+void s_queue_clear(SQueue *queue);
+
 #endif /* __S_QUEUE_H__ */

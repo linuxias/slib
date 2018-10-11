@@ -89,3 +89,21 @@ int s_queue_get_length(SQueue *queue)
 
 	return queue->length;
 }
+
+void s_queue_init(SQueue *queue)
+{
+    if (queue == NULL)
+        return;
+
+    queue->head = queue->tail = NULL;
+    queue->length = 0;
+}
+
+void s_queue_clear(SQueue *queue)
+{
+    if (queue == NULL)
+        return;
+
+    s_list_free(queue->head);
+    s_queue_init(queue);
+}
