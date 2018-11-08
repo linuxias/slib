@@ -9,6 +9,9 @@
 #define S_COLOR_CYAN    "\x1b[36m"
 #define S_COLOR_RESET   "\x1b[0m"
 
+#define S_BOLD_START "\x1b[1;31m"
+#define S_BOLD_RESET "\x1b[0m"
+
 #define PRINT printf
 
 #define PRINT_RED(fmt , args...) \
