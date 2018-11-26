@@ -3,6 +3,11 @@
 #include "s_hash_table.h"
 #include "s_macro.h"
 
+typedef struct {
+	char *key;
+	void *value;
+} PrivateHashTable;
+
 SHashTable *s_hash_table_create()
 {
 	SHashTable *table = NULL;
@@ -18,4 +23,9 @@ void s_hash_table_destroy(SHashTable *table)
 {
 	if (table)
 		free(table);
+}
+
+SHashTable *s_hash_table_add(SHashTable *table, const char *key, void *value)
+{
+	return NULL;
 }

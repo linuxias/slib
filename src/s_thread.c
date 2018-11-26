@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "s_thread.h"
-#include "s_macros.h"
+#include "s_macro.h"
 
 SThread *s_thread_create(SThreadWorker worker, void *data)
 {

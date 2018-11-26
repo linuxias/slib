@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "s_list.h"
-#include "s_macros.h"
+#include "s_macro.h"
 #include "s_queue.h"
 
 SQueue *s_queue_create(void)

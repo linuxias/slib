@@ -9,7 +9,7 @@ SAsyncQueue *s_async_queue_create(void)
     SAsyncQueue *queue;
 
     queue = (SAsyncQueue *)calloc(1, sizeof(SAsyncQueue));
-    if (queue == NULL)
+    if S_UNLIKELY (queue == NULL)
         return NULL;
 
     pthread_mutex_init(&queue->mtx, NULL);
