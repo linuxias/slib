@@ -32,4 +32,8 @@
 #define FALSE 0
 #endif
 
+// Portable UNUSED parameter macro used on function signature for C and C++
+#ifndef UNUSED(x) (void)x;
+
+
 #endif /* __S_MACROTS_H__ */
