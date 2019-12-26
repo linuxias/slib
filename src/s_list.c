@@ -45,6 +45,31 @@ SList *s_list_append(SList *list, spointer data)
 	}
 }
 
+SList *s_list_prepend(SList *list, mpointer data)
+{
+    SList *new_list = NULL;
+
+    new_list = _s_list_alloc();
+    if (new_list == NULL) {
+        ERR("OOM");
+        return NULL;
+    }
+    new_list->data = data;
+    new_list->next = list;
+
+    if (list) {
+        new_list->pre = list->pre;
+        if (list->pre) {
+            list->pre->next = new_list;
+        }
+        list->pre = new_list;
+    } else {
+        new_list->pre = NULL;
+    }
+
+    return new_list;
+}
+
 void s_list_free(SList *list)
 {
 	if (list)
