@@ -1,5 +1,5 @@
-#ifndef __S_MACROS_H__
-#define __S_MACROS_H__
+#ifndef __S_MACRO_H__
+#define __S_MACRO_H__
 
 #if     __GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ >= 8)
 #define S_GNUC_EXTENSION __extension__
@@ -9,14 +9,14 @@
 
 #if defined(__GNUC__) && (__GNUC__ > 2) && defined(__OPTIMIZE__)
 #define _S_BOOLEAN_EXPR(expr)                   \
-         S_GNUC_EXTENSION ({                            \
-                    int _s_boolean_var_;                         \
-                    if (expr)                                    \
-                       _s_boolean_var_ = 1;                      \
-                    else                                         \
-                       _s_boolean_var_ = 0;                      \
-                    _s_boolean_var_;                             \
-                 })
+    S_GNUC_EXTENSION ({                            \
+            int _s_boolean_var_;                         \
+            if (expr)                                    \
+            _s_boolean_var_ = 1;                      \
+            else                                         \
+            _s_boolean_var_ = 0;                      \
+            _s_boolean_var_;                             \
+            })
 #define S_LIKELY(expr) (__builtin_expect (_S_BOOLEAN_EXPR((expr)), 1))
 #define S_UNLIKELY(expr) (__builtin_expect (_S_BOOLEAN_EXPR((expr)), 0))
 #else
@@ -32,8 +32,5 @@
 #define FALSE 0
 #endif
 
-// Portable UNUSED parameter macro used on function signature for C and C++
-#ifndef UNUSED(x) (void)x;
 
-
-#endif /* __S_MACROTS_H__ */
+#endif /* __S_MACRO_H__ */
