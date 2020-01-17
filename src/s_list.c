@@ -45,7 +45,7 @@ SList *s_list_append(SList *list, spointer data)
 	}
 }
 
-SList *s_list_prepend(SList *list, mpointer data)
+SList *s_list_prepend(SList *list, spointer data)
 {
     SList *new_list = NULL;
 
